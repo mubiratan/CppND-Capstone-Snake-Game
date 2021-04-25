@@ -43,7 +43,7 @@ Renderer::Renderer(const std::size_t screen_width,
   obstacleSurface = SDL_LoadBMP("../assets/unlit-bomb.bmp");
   obstacleTexture = SDL_CreateTextureFromSurface(sdl_renderer, obstacleSurface);
 
-  boosterSurface = SDL_LoadBMP("../assets/rocket.bmp");
+  boosterSurface = SDL_LoadBMP("../assets/slug.bmp");
   boosterTexture = SDL_CreateTextureFromSurface(sdl_renderer, boosterSurface);
 }
 
