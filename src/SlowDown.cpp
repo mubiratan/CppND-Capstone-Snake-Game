@@ -5,7 +5,8 @@
 SlowDown::SlowDown()
 {
     // Initialising unique pointer
-    _coordinates = std::unique_ptr<std::vector<Coordinate>>(new std::vector<Coordinate>);
+    _coordinates =
+            std::unique_ptr<std::vector<Coordinate>>(new std::vector<Coordinate>);
 }
 
 void SlowDown::addCoordinate(const Coordinate &&coordinate)
@@ -47,7 +48,7 @@ void SlowDown::deleteSlowDownCellAt(const Coordinate &&coordinate)
 
 const std::vector<Coordinate> &SlowDown::getCoordinates() const
 {
-    return *_coordinates; // Copy will not be made due to RVO
+    return *_coordinates;
 }
 
 int SlowDown::count() const

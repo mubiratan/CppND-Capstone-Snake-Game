@@ -110,7 +110,7 @@ void Game::Update()
   /// Is the new cell a booster cell.
   if (_slowDown->SlowDownCell(Coordinate(new_x, new_y)))
   {
-    snake.speed += 0.01;
+    snake.speed -= 0.01;
    _slowDown->deleteSlowDownCellAt(Coordinate(new_x, new_y));
     return;
   }
