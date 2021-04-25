@@ -4,9 +4,9 @@ This is a starter repo for the Capstone project in the [Udacity C++ Nanodegree P
 
 <img src="snake_game.gif"/>
 
-The Capstone Project gives you a chance to integrate what you've learned throughout this program. This project will become an important part of your portfolio to share with current and future colleagues and employers.
-
-In this project, you can build your own C++ application or extend this Snake game, following the principles you have learned throughout this Nanodegree Program. This project will demonstrate that you can independently create applications using a wide range of C++ features.
+- When you touch the slug your speed will slow down, be careful not to stop completely.
+- Watch out for obstacles.
+- The number of obstacles and reinforcements can be configured in the config.txt file.
 
 ## Dependencies for Running Locally
 * cmake >= 3.7
@@ -31,16 +31,15 @@ In this project, you can build your own C++ application or extend this Snake gam
 4. Run it: `./SnakeGame`.
 
 
-## CC Attribution-ShareAlike 4.0 International
+## Meets Rubric
 
-
-Shield: [![CC BY-SA 4.0][cc-by-sa-shield]][cc-by-sa]
-
-This work is licensed under a
-[Creative Commons Attribution-ShareAlike 4.0 International License][cc-by-sa].
-
-[![CC BY-SA 4.0][cc-by-sa-image]][cc-by-sa]
-
-[cc-by-sa]: http://creativecommons.org/licenses/by-sa/4.0/
-[cc-by-sa-image]: https://licensebuttons.net/l/by-sa/4.0/88x31.png
-[cc-by-sa-shield]: https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg
+- The project demonstrates an understanding of C++ functions and control structures.
+- The project reads data from a file and process the data, or the program writes data to a file.
+- The project uses Object Oriented Programming techniques.
+- Classes use appropriate access specifiers for class members.
+- Class constructors utilize member initialization lists.
+- Classes abstract implementation details from their interfaces.
+- Classes encapsulate behavior.
+- The project makes use of references in function declarations.
+- The project uses move semantics to move data, instead of copying it, where possible.
+- The project uses smart pointers instead of raw pointers.
