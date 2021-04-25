@@ -4,19 +4,41 @@
 #include <vector>
 #include "SDL.h"
 #include "snake.h"
+#include <memory>
+#include "Obstacles.h"
+#include "SlowDown.h"
 
-class Renderer {
- public:
+class Renderer
+{
+public:
   Renderer(const std::size_t screen_width, const std::size_t screen_height,
            const std::size_t grid_width, const std::size_t grid_height);
   ~Renderer();
 
-  void Render(Snake const snake, SDL_Point const &food);
+  /// Rendering initial static obstacles
+  void Render(Snake const snake,
+              SDL_Point const &food,
+              const std::shared_ptr<Obstacles> obstacles,
+              const std::shared_ptr<SlowDown> slowDown);
+
   void UpdateWindowTitle(int score, int fps);
 
- private:
+private:
   SDL_Window *sdl_window;
   SDL_Renderer *sdl_renderer;
+
+  // Obstacle surface
+  SDL_Surface *obstacleSurface;
+  // Obstacle Texture
+  SDL_Texture *obstacleTexture;
+
+  // Booster surface
+  SDL_Surface *boosterSurface;
+  // Booster Texture
+  SDL_Texture *boosterTexture;
+
+  void placeObstacles(const std::shared_ptr<Obstacles> obstacles) const;
+  void placeSlowDown(const std::shared_ptr<SlowDown> _slowDown) const;
 
   const std::size_t screen_width;
   const std::size_t screen_height;
